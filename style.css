@@ -1,0 +1,24 @@
+.boxClass{
+    height: 80px;
+    width: 80px;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+   /* display: flex; */
+   /* flex-grow: 1; */
+}
+.mainBoard{
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin: 20px; */
+    /* justify-content: center; */
+}
+.container{
+    /* display: flex;
+    justify-content: center;
+    flex-shrink: -1; */
+    
+}
