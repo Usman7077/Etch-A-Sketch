@@ -1,34 +1,52 @@
-// const first = document.createElement("div");
-// first.id = "first"
-// first.classList.add('firstDiv');
-// const s = document.getElementById("mainBoard");
-// s.appendChild(first);
-
 const arr = [];
-const l = prompt();
-const bx = 800/l;
-const size = l * l;
 
-for (let i = 0; i < size; i++) {
-    arr[i] = document.createElement("div");
-    arr[i].id = `arr${i}`;
-    arr[i].classList.add('boxClass');
-    const t = document.getElementById("mainBoard");
-    t.appendChild(arr[i]);
+const btn = document.getElementById("enterButton");
+btn.addEventListener('click', sketchStructure);
+const clearBtn = document.getElementById("clearBtn");
+clearBtn.addEventListener('click', clear)
 
-    document.getElementById(`arr${i}`)
-        .addEventListener('mouseover', function (e) {
-            console.log(e.target.id);
-            const y = e.target.id;
-            const k = document.getElementById(y);
-            k.style.backgroundColor = "blue";
-        });
+function Sketch() {
+    const l = Number(input.value);
+    console.log(typeof l);
+    console.log(l);
+    const bx = 700 / l;
+    console.log(bx);
+    const size = l * l;
+    for (let i = 0; i < size; i++) {
+        arr[i] = document.createElement("div");
+        arr[i].id = `arr${i}`;
+        arr[i].classList.add('boxClass');
+        arr[i].style.height = `${bx}px`;
+        arr[i].style.width = `${bx}px`;
+
+        console.log(arr[i].style.height);
+
+        const t = document.getElementById("mainBoard");
+        t.appendChild(arr[i]);
+
+       const k= document.getElementById(`arr${i}`);
+            k.addEventListener('mouseover', function () {
+                k.style.backgroundColor = "red";
+            });
+    }
+}
+function sketchStructure() {
+    document.getElementById("mainBoard").innerHTML = "";
+    Sketch();
 }
 
-// const x = document.getElementById('first');
-// x.addEventListener('mouseover', function (e) {
-//     console.log(e.target.id);
-//     const y = e.target.id;
-//     const k = document.getElementById(y);
-//     k.style.backgroundColor = "blue";
-// });
+function clear() {
+    const l = Number(input.value);
+    const size = l * l;
+    for (let i = 0; i < size; i++) {
+        document.getElementById(`arr${i}`).style.backgroundColor = "yellow";
+    }
+}
+
+function clear2() {
+    const l = Number(input.value);
+    const size = l * l;
+    for (let i = 0; i < size; i++) {
+        document.getElementById(`arr${i}`).remove;
+    }
+}

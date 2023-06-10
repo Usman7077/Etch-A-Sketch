@@ -1,24 +1,46 @@
+h1{
+    color: rgb(255, 0, 157);
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+h2{
+    color: rgb(255, 153, 0);
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .boxClass{
     height: 80px;
     width: 80px;
-    border: 1px;
-    border-color: black;
-    border-style: solid;
+    /* border: 1px; */
+    /* border-style: solid; */
    /* display: flex; */
    /* flex-grow: 1; */
 }
 .mainBoard{
     display: flex;
     flex-wrap: wrap;
-    width: 800px;
+    width: 700px;
+    height: 700px;
+    padding: 2px;
     margin-left: auto;
     margin-right: auto;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
     /* margin: 20px; */
     /* justify-content: center; */
 }
-.container{
-    /* display: flex;
+.inputContainer{
+    display: flex;
     justify-content: center;
-    flex-shrink: -1; */
-    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
