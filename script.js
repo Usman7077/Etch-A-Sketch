@@ -4,7 +4,10 @@ const btn = document.getElementById("enterButton");
 const clr = document.getElementById("clr");
 btn.addEventListener('click', sketchStructure);
 const clearBtn = document.getElementById("clearBtn");
-clearBtn.addEventListener('click', clear)
+clearBtn.addEventListener('click', clear);
+document.getElementById("input").addEventListener('change', function(){
+    document.getElementById("rangeValue").innerText=input.value;
+});
 
 function Sketch() {
     const l = Number(input.value);

@@ -46,3 +46,10 @@ width: 700px;
 #clearBtn{
     width: 100px;
 }
+.inputContainer>#inputLabel{
+    font-weight:bolder;
+    color: rgb(255, 0, 43);
+}
+#input{
+    color: brown;
+}
