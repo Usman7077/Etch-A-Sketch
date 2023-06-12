@@ -1,6 +1,7 @@
 const arr = [];
 
 const btn = document.getElementById("enterButton");
+const clr = document.getElementById("clr");
 btn.addEventListener('click', sketchStructure);
 const clearBtn = document.getElementById("clearBtn");
 clearBtn.addEventListener('click', clear)
@@ -26,7 +27,7 @@ function Sketch() {
 
        const k= document.getElementById(`arr${i}`);
             k.addEventListener('mouseover', function () {
-                k.style.backgroundColor = "red";
+                k.style.backgroundColor = clr.value;
             });
     }
 }
@@ -39,7 +40,7 @@ function clear() {
     const l = Number(input.value);
     const size = l * l;
     for (let i = 0; i < size; i++) {
-        document.getElementById(`arr${i}`).style.backgroundColor = "yellow";
+        document.getElementById(`arr${i}`).style.backgroundColor = "white";
     }
 }
 
